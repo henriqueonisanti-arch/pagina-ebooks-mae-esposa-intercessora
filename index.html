@@ -5,10 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E-books Esposa & Mãe Intercessora | Karenn Onisanti</title>
   <meta name="description" content="Aprenda a interceder com precisão pelo seu casamento e seus filhos. Manuais práticos de batalha espiritual com estratégia e fé." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%235C1A26'/><text y='.9em' font-size='80' x='10'>🕊️</text></svg>" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Esposa & Mãe Intercessora — Karenn Onisanti" />
+  <meta property="og:description" content="Aprenda a interceder com direção e autoridade pelo seu casamento e pelos seus filhos. Manuais práticos de batalha espiritual." />
+  <meta property="og:image" content="assets/hero-desktop.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
+        /* ── STICKY CTA MOBILE ── */
+        @media (max-width: 600px) {
+          .sticky-cta-mobile {
+            position: fixed;
+            left: 0; right: 0; bottom: 0;
+            background: linear-gradient(90deg, var(--wine), var(--wine-lt));
+            box-shadow: 0 -2px 16px rgba(58,15,24,.18);
+            padding: 16px 24px 18px 24px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slideup .4s;
+          }
+          .sticky-cta-mobile .btn {
+            font-size: 17px;
+            padding: 16px 32px;
+            width: 100%;
+            max-width: 400px;
+          }
+          body { padding-bottom: 80px; }
+          @keyframes slideup {
+            from { transform: translateY(100%); opacity: 0; }
+            to   { transform: translateY(0); opacity: 1; }
+          }
+        }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -51,18 +88,23 @@
 
     /* ── HERO ── */
     #hero {
-      background: linear-gradient(165deg, var(--wine-dk) 0%, var(--wine) 55%, #7A2535 100%);
+      background:
+        linear-gradient(165deg, rgba(14,10,26,0.82) 0%, rgba(92,26,38,0.70) 50%, rgba(14,10,26,0.85) 100%),
+        url('assets/hero-desktop.jpg') center center / cover no-repeat;
       padding: 80px 0 72px;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
-    #hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      z-index: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    @media (max-width: 600px) {
+      #hero {
+        background:
+          linear-gradient(180deg, rgba(14,10,26,0.80) 0%, rgba(14,10,26,0.65) 50%, rgba(14,10,26,0.88) 100%),
+          url('assets/hero-mobile.jpg') center top / cover no-repeat;
+        padding: 72px 0 64px;
+      }
     }
+    #hero::before { display: none; }
     #hero .container { position: relative; z-index: 1; }
     .hero-eyebrow {
       display: inline-block;
@@ -147,6 +189,7 @@
       font-size: 15px;
       color: var(--text-mid);
       box-shadow: 0 2px 12px var(--shadow);
+      cursor: default;
     }
     .pain-item .icon { font-size: 26px; margin-bottom: 10px; display: block; }
     .pain-bridge {
@@ -276,8 +319,10 @@
     .combo-card::before {
       content: '';
       position: absolute; inset: 0;
+      pointer-events: none;
       background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20.5V18H0v5h5v5H0v5h20v-2.5h5V20.5H20zm5 5V18h5v5h-5zM0 5h5v2.5H0V10h5v2.5H0V15h20V0H0v5zm10 7.5V10h5v2.5h-5zm0-5V5h5v2.5h-5z'/%3E%3C/g%3E%3C/svg%3E");
     }
+    .combo-card > * { position: relative; z-index: 1; }
     .combo-best {
       display: inline-block;
       background: var(--gold);
@@ -362,11 +407,18 @@
     .btn:hover { transform: translateY(-2px); }
 
     .btn-wine {
-      background: linear-gradient(135deg, var(--wine), var(--wine-lt));
-      color: var(--cream-lt);
+      background: linear-gradient(135deg, #4A1120, #7A2535);
+      color: #FFF8F0;
       box-shadow: 0 6px 24px rgba(92,26,38,.35);
+      border: 2px solid #FFF8F0;
+      text-shadow: 0 1px 2px #3A0F18;
     }
-    .btn-wine:hover { box-shadow: 0 10px 32px rgba(92,26,38,.5); }
+    .btn-wine:hover {
+      background: linear-gradient(135deg, #3A0F18, #5C1A26);
+      color: #FFF8F0;
+      box-shadow: 0 10px 32px rgba(92,26,38,.5);
+      border: 2px solid #FFF8F0;
+    }
 
     .btn-gold {
       background: linear-gradient(135deg, var(--gold), var(--gold-lt));
@@ -432,11 +484,19 @@
     }
     .stat .l { font-size: 12px; color: var(--text-lt); }
 
+    /* ── WAVE DIVIDERS ── */
+    .wave {
+      display: block; width: 100%;
+      height: 48px; overflow: hidden;
+      line-height: 0;
+    }
+    .wave svg { display: block; width: 100%; height: 100%; }
+
     /* ── DEPOIMENTOS ── */
     #depoimentos { padding: 80px 0; background: var(--cream-lt); }
     .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
     .testimonial-img {
@@ -444,6 +504,31 @@
       border: 1px solid var(--cream-dk);
       box-shadow: 0 4px 20px var(--shadow);
       display: block;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid var(--cream-dk);
+      border-radius: 14px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 20px var(--shadow);
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      font-family: 'Playfair Display', serif;
+      font-size: 72px; line-height: 1;
+      color: var(--gold); opacity: .25;
+      position: absolute; top: 8px; left: 18px;
+    }
+    .testimonial-card p {
+      font-size: 15px; color: var(--text-mid);
+      line-height: 1.7; margin-top: 20px;
+      font-style: italic;
+    }
+    .testimonial-card .author {
+      margin-top: 16px; font-size: 13px;
+      font-weight: 700; color: var(--wine);
+      font-style: normal;
     }
 
     /* ── GARANTIA ── */
@@ -513,9 +598,40 @@
     }
     footer a { color: rgba(244,235,217,.45); text-decoration: none; }
 
+    /* Depoimentos grid responsivo para 1 item */
+    @media (max-width: 800px) {
+      .testimonials-grid:only-child,
+      .testimonials-grid:has(> div:only-child),
+      .testimonials-grid:has(> img:only-child) {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
     /* ── SCROLL ANCHORS ── */
-    #produtos, #autora, #depoimentos, #garantia, #final-cta {
+    #pain, #produtos, #autora, #depoimentos, #garantia, #final-cta {
       scroll-margin-top: 16px;
+    }
+
+    /* ── COMBO PULSE — mobile destaque ── */
+    @keyframes pulse-border {
+      0%, 100% { box-shadow: 0 8px 48px rgba(58,15,24,.3), 0 0 0 0 rgba(194,148,58,.6); }
+      50%       { box-shadow: 0 8px 48px rgba(58,15,24,.3), 0 0 0 8px rgba(194,148,58,.0); }
+    }
+    @media (max-width: 768px) {
+      .combo-card {
+        animation: pulse-border 2.4s ease-in-out infinite;
+      }
+    }
+
+    /* ── FADE-IN AO SCROLL ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* ── RESPONSIVE ── */
@@ -527,6 +643,32 @@
   </style>
 </head>
 <body>
+
+<!-- ═══════════════════════ STICKY CTA MOBILE ═══════════════════════ -->
+<div class="sticky-cta-mobile" style="display:none;">
+  <a href="#produtos" class="btn btn-gold btn-full">Quero blindar minha família</a>
+</div>
+
+<script>
+  // Exibe o sticky CTA apenas em telas pequenas e quando não está vendo os produtos
+  function handleStickyCTA() {
+    var cta = document.querySelector('.sticky-cta-mobile');
+    if(window.innerWidth <= 600) {
+      cta.style.display = 'flex';
+      // Esconde se estiver vendo a seção de produtos
+      var produtos = document.getElementById('produtos');
+      var rect = produtos.getBoundingClientRect();
+      if(rect.top < 120 && rect.bottom > 120) {
+        cta.style.display = 'none';
+      }
+    } else {
+      cta.style.display = 'none';
+    }
+  }
+  window.addEventListener('scroll', handleStickyCTA);
+  window.addEventListener('resize', handleStickyCTA);
+  window.addEventListener('DOMContentLoaded', handleStickyCTA);
+</script>
 
 <!-- ═══════════════════════ HERO ═══════════════════════ -->
 <section id="hero">
@@ -544,17 +686,18 @@
     </p>
 
     <a href="#produtos" class="btn btn-gold" style="font-size:17px; padding:18px 40px;">
-      Ver os E-books →
+      Quero blindar minha família →
     </a>
-    <span class="btn-sub-light" style="margin-top:14px;">Acesso imediato · A partir de R$ 37</span>
 
     <div class="hero-badges">
       <span class="hero-badge">🛡️ Garantia de 7 dias</span>
       <span class="hero-badge">📲 Acesso imediato</span>
-      <span class="hero-badge">💳 Pix · Cartão · Boleto</span>
     </div>
   </div>
 </section>
+
+<!-- wave: hero → pain -->
+<span class="wave" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,32 C360,0 1080,48 1440,16 L1440,48 L0,48 Z" fill="#F4EBD9"/></svg></span>
 
 <!-- ═══════════════════════ DOR ═══════════════════════ -->
 <section id="pain">
@@ -565,7 +708,7 @@
       <p>Se sim, você não está sozinha — e há uma saída.</p>
     </div>
 
-    <div class="pain-grid">
+    <div class="pain-grid fade-in">
       <div class="pain-item">
         <span class="icon">⚔️</span>
         Conflitos no casamento que voltam sempre, por mais que você ore
@@ -584,7 +727,7 @@
       </div>
     </div>
 
-    <div class="pain-bridge">
+    <div class="pain-bridge fade-in">
       <p>
         O problema não é sua fé.<br/>
         É que <strong>ninguém te ensinou a usar sua fé como arma.</strong>
@@ -592,6 +735,9 @@
     </div>
   </div>
 </section>
+
+<!-- wave: pain → produtos -->
+<span class="wave" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,16 C360,48 1080,0 1440,32 L1440,48 L0,48 Z" fill="#FAF4EA"/></svg></span>
 
 <!-- ═══════════════════════ PRODUTOS ═══════════════════════ -->
 <section id="produtos">
@@ -603,14 +749,15 @@
     </div>
 
     <!-- ESPOSA INTERCESSORA -->
-    <div class="product-card">
-      <span class="product-badge">E-book 01</span>
+    <div class="product-card fade-in">
       <div class="product-layout">
         <div>
+          <span class="product-badge">E-book 01</span>
           <img
-            src="assets/esposa-intercessora.png"
+            src="assets/esposa-intercessora-capa.jpg"
             alt="E-book Esposa Intercessora"
             class="product-mockup"
+            loading="lazy"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
           />
           <div class="product-mockup-placeholder" style="display:none;">
@@ -636,7 +783,7 @@
           </ul>
 
           <a href="https://pay.hotmart.com/P105104040J" target="_blank" rel="noopener" class="btn btn-wine btn-full">
-            Quero o E-book Esposa Intercessora — R$ 37
+            Interceder pelo meu casamento — R$ 37
           </a>
           <span class="btn-sub">Acesso imediato após pagamento</span>
         </div>
@@ -644,14 +791,15 @@
     </div>
 
     <!-- MÃE INTERCESSORA -->
-    <div class="product-card">
-      <span class="product-badge">E-book 02</span>
+    <div class="product-card fade-in">
       <div class="product-layout">
         <div>
+          <span class="product-badge">E-book 02</span>
           <img
-            src="assets/mae-intercessora.png"
+            src="assets/mae-intercessora-capa.jpg"
             alt="E-book Mãe Intercessora"
             class="product-mockup"
+            loading="lazy"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
           />
           <div class="product-mockup-placeholder" style="display:none;">
@@ -677,7 +825,7 @@
           </ul>
 
           <a href="https://pay.hotmart.com/P105104062G" target="_blank" rel="noopener" class="btn btn-wine btn-full">
-            Quero o E-book Mãe Intercessora — R$ 37
+            Interceder pelos meus filhos — R$ 37
           </a>
           <span class="btn-sub">Acesso imediato após pagamento</span>
         </div>
@@ -685,17 +833,19 @@
     </div>
 
     <!-- COMBO -->
-    <div class="combo-card">
+    <div class="combo-card fade-in">
       <span class="combo-best">✦ Melhor Escolha</span>
       <h3>Combo Família Blindada</h3>
-      <p>Os dois manuais juntos para cobrir sua família por completo — casamento e filhos protegidos com direção, fé e estratégia.</p>
+      <p class="combo-description">Os dois manuais juntos para cobrir sua família por completo — casamento e filhos protegidos com direção, fé e estratégia.</p>
 
       <div class="combo-mockups">
-        <img src="assets/esposa-intercessora.png" alt="Esposa Intercessora"
+        <img src="assets/esposa-intercessora-capa.jpg" alt="E-book Esposa Intercessora"
+          width="140" height="187" loading="lazy"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
         <div class="placeholder" style="display:none;">ESPOSA<br/>INTERCESSORA</div>
 
-        <img src="assets/mae-intercessora.png" alt="Mãe Intercessora"
+        <img src="assets/mae-intercessora-capa.jpg" alt="E-book Mãe Intercessora"
+          width="140" height="187" loading="lazy"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
         <div class="placeholder" style="display:none;">MÃE<br/>INTERCESSORA</div>
       </div>
@@ -703,7 +853,7 @@
       <div class="price-row">
         <span class="price-old">De R$ 74,00</span>
         <span class="price-new">R$ 46,90</span>
-        <span class="price-save">Economia de R$ 27</span>
+        <span class="price-save">Economia de R$ 27,10</span>
       </div>
 
       <a href="https://pay.hotmart.com/O105108891T" target="_blank" rel="noopener"
@@ -721,6 +871,9 @@
   </div>
 </section>
 
+<!-- wave: produtos → autora -->
+<span class="wave" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,32 C360,0 1080,48 1440,16 L1440,48 L0,48 Z" fill="#F4EBD9"/></svg></span>
+
 <!-- ═══════════════════════ AUTORA ═══════════════════════ -->
 <section id="autora">
   <div class="container">
@@ -728,10 +881,11 @@
       <div class="divider"></div>
       <h2>Quem é Karenn Onisanti</h2>
     </div>
-    <div class="author-wrap">
+    <div class="author-wrap fade-in">
       <div class="author-photo-wrap">
         <img src="assets/karenn.jpg" alt="Karenn Onisanti" class="author-photo"
-          onerror="this.style.background='var(--wine)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.alt='';" />
+          loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="author-photo-placeholder" style="display:none; width:180px; height:180px; border-radius:50%; background:var(--wine); color:var(--gold-lt); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:22px; font-weight:700;">Karenn Onisanti</div>
         <div class="author-photo-ring"></div>
       </div>
       <div class="author-body">
@@ -744,13 +898,16 @@
 
         <div class="author-stats">
           <div class="stat"><span class="n">+9</span><span class="l">anos pastoreando</span></div>
-          <div class="stat"><span class="n">100s</span><span class="l">líderes capacitadas</span></div>
-          <div class="stat"><span class="n">🌎</span><span class="l">Brasil e mundo</span></div>
+          <div class="stat"><span class="n">100+</span><span class="l">líderes capacitadas</span></div>
+          <div class="stat"><span class="n">12</span><span class="l">estados atendidos</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- wave: autora → depoimentos -->
+<span class="wave" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,16 C360,48 1080,0 1440,32 L1440,48 L0,48 Z" fill="#FAF4EA"/></svg></span>
 
 <!-- ═══════════════════════ DEPOIMENTOS ═══════════════════════ -->
 <section id="depoimentos">
@@ -760,12 +917,23 @@
       <h2>O que estão dizendo</h2>
       <p>Mulheres que já colocaram em prática a intercessão combativa.</p>
     </div>
-    <div class="testimonials-grid">
-      <img src="assets/depoimento-1.jpg" alt="Depoimento de leitora" class="testimonial-img" />
-      <img src="assets/depoimento-2.jpg" alt="Depoimento de leitora" class="testimonial-img"
-        onerror="this.style.display='none'" />
-      <img src="assets/depoimento-3.jpg" alt="Depoimento de leitora" class="testimonial-img"
-        onerror="this.style.display='none'" />
+    <div class="testimonials-grid fade-in">
+      <div>
+        <img src="assets/depoimento-01.jpg" alt="Depoimento de leitora" class="testimonial-img" loading="lazy"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+        <div class="testimonial-card" style="display:none;">
+          <p>Este e-book mudou a forma como eu oro pelo meu casamento. Aprendi que oração sem direção cansa, mas com estratégia transforma.</p>
+          <span class="author">— Leitora, Esposa Intercessora</span>
+        </div>
+      </div>
+      <div>
+        <img src="assets/depoimento-02.jpg" alt="Depoimento de leitora" class="testimonial-img" loading="lazy"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+        <div class="testimonial-card" style="display:none;">
+          <p>Comprei o combo e já na primeira semana vi mudanças reais na vida dos meus filhos. Deus honrou cada oração com direção.</p>
+          <span class="author">— Leitora, Mãe Intercessora</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -773,7 +941,7 @@
 <!-- ═══════════════════════ GARANTIA ═══════════════════════ -->
 <section id="garantia">
   <div class="container">
-    <div class="guarantee-box">
+    <div class="guarantee-box fade-in">
       <span class="icon">🛡️</span>
       <h3>Garantia de 7 Dias</h3>
       <p>Se você adquirir o e-book e sentir que não era o que esperava, entre em contato em até 7 dias e devolvemos seu dinheiro integralmente. Sem burocracia, sem perguntas.</p>
@@ -811,10 +979,41 @@
 <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <footer>
   <div class="container">
-    <p>© 2025 Karenn Onisanti · Escola do Intercessor</p>
-    <p style="margin-top:6px;"><a href="https://escoladointercessor.com.br">escoladointercessor.com.br</a></p>
+    <p>© 2026 Karenn Onisanti · Escola do Intercessor</p>
+    <p style="margin-top:6px;"><a href="https://escoladointercessor.com.br" target="_blank" rel="noopener">escoladointercessor.com.br</a></p>
   </div>
 </footer>
 
+<script>
+  // Fade-in ao scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Passa UTMs para o checkout Hotmart via sck
+  (function() {
+    const p = new URLSearchParams(window.location.search);
+    const src      = p.get('utm_source')   || '';
+    const medium   = p.get('utm_medium')   || '';
+    const campaign = p.get('utm_campaign') || '';
+    const content  = p.get('utm_content')  || '';
+    const term     = p.get('utm_term')     || '';
+
+    const sck = [src, medium, campaign, content, term].join('||');
+    if (!sck.replace(/\|/g, '').trim()) return; // sem UTMs, não altera nada
+
+    document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(link) {
+      const url = new URL(link.href);
+      url.searchParams.set('sck', sck);
+      link.href = url.toString();
+    });
+  })();
+</script>
 </body>
 </html>
