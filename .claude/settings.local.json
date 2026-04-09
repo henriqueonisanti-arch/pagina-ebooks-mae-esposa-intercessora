@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l \"c:\\\\Users\\\\Samsung\\\\.claude\\\\commands\"/*.md)",
+      "Bash(wc -l \"c:\\\\Users\\\\Samsung\\\\.claude\\\\plans\"/*.md)",
+      "Bash(find \"c:\\\\Users\\\\Samsung\\\\.claude\\\\projects\\\\c--Users-Samsung\\\\memory\" -type f -exec wc -l {} +)",
+      "Bash(npx skills:*)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/skills/copywriting/SKILL.md\")",
+      "WebFetch(domain:escoladointercessor.com.br)",
+      "WebFetch(domain:web.archive.org)",
+      "Bash(npx serve:*)",
+      "Bash(curl -s http://localhost:4000 -o /dev/null -w \"%{http_code}\")",
+      "Bash(cmd //c \"dir /b \\\\\"c:\\\\Users\\\\Samsung\\\\pagina-karen-onisanti\\\\assets\\\\\"\")",
+      "Bash(powershell -Command \"Get-ChildItem 'C:\\\\Users\\\\Samsung\\\\pagina-karen-onisanti\\\\assets' | Select-Object Name\")",
+      "Bash(powershell -Command \"Get-ChildItem 'C:\\\\Users\\\\Samsung\\\\pagina-karen-onisanti\\\\assets'\")",
+      "Bash(mv \"esposa-intercessora.png.jpg\" \"esposa-intercessora.png\")",
+      "Bash(mv \"mae-intercessora.png.jpg\" \"mae-intercessora.png\")",
+      "Bash(mv \"karenn.jpg.jpg\" \"karenn.jpg\")",
+      "Bash(mv \"depoimento-1.jpg.jpg\" \"depoimento-1.jpg\")",
+      "Bash(powershell -Command \"Get-ChildItem 'C:\\\\Users\\\\Samsung\\\\pagina-karen-onisanti\\\\assets' | Select-Object -ExpandProperty Name | Out-String\")",
+      "Bash(powershell -Command \"ls 'C:\\\\Users\\\\Samsung\\\\pagina-karen-onisanti\\\\assets' | ft Name\")",
+      "Bash(curl -s \"http://localhost:4000/assets/esposa-intercessora.png.jpg\" -o /dev/null -w \"%{http_code}\")"
+    ]
+  }
+}

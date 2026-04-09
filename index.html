@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-books Esposa & Mãe Intercessora | Karenn Onisanti</title>
+  <meta name="description" content="Aprenda a interceder com precisão pelo seu casamento e seus filhos. Manuais práticos de batalha espiritual com estratégia e fé." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    #F4EBD9;
+      --cream-lt: #FAF4EA;
+      --cream-dk: #E8D8C0;
+      --wine:     #5C1A26;
+      --wine-dk:  #3A0F18;
+      --wine-lt:  #7A2535;
+      --gold:     #C2943A;
+      --gold-lt:  #D9AF5C;
+      --gold-dk:  #9E7020;
+      --text:     #2A0D14;
+      --text-mid: #5A3040;
+      --text-lt:  #8A6070;
+      --white:    #FFFFFF;
+      --shadow:   rgba(58,15,24,.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream-lt);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* ── UTILS ── */
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .center    { text-align: center; }
+    .gold      { color: var(--gold); }
+
+    .divider {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+      border-radius: 2px;
+      margin: 0 auto 24px;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      background: linear-gradient(165deg, var(--wine-dk) 0%, var(--wine) 55%, #7A2535 100%);
+      padding: 80px 0 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      z-index: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    #hero .container { position: relative; z-index: 1; }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold-lt);
+      border: 1px solid rgba(210,175,92,.35);
+      border-radius: 20px;
+      padding: 5px 18px;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    #hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5.5vw, 56px);
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--cream-lt);
+      margin-bottom: 20px;
+      position: relative;
+    }
+    #hero h1 em {
+      font-style: italic;
+      color: var(--gold-lt);
+    }
+    #hero .sub {
+      font-size: clamp(16px, 2.5vw, 19px);
+      color: rgba(244,235,217,.7);
+      max-width: 560px;
+      margin: 0 auto 44px;
+      position: relative;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      position: relative;
+    }
+    .hero-badge {
+      display: flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 13px;
+      color: rgba(244,235,217,.75);
+    }
+
+    /* ── PAIN ── */
+    #pain {
+      padding: 72px 0;
+      background: var(--cream);
+    }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 900;
+      color: var(--wine-dk);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      color: var(--text-mid);
+      font-size: 17px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .pain-item {
+      background: var(--white);
+      border: 1px solid var(--cream-dk);
+      border-radius: 14px;
+      padding: 22px 18px;
+      font-size: 15px;
+      color: var(--text-mid);
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    .pain-item .icon { font-size: 26px; margin-bottom: 10px; display: block; }
+    .pain-bridge {
+      background: var(--wine-dk);
+      border-radius: 16px;
+      padding: 36px 32px;
+      text-align: center;
+    }
+    .pain-bridge p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(18px, 3vw, 23px);
+      color: var(--cream-lt);
+      line-height: 1.55;
+    }
+    .pain-bridge strong { color: var(--gold-lt); }
+
+    /* ── PRODUTOS ── */
+    #produtos { padding: 80px 0; background: var(--cream-lt); }
+
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--cream-dk);
+      border-radius: 24px;
+      padding: 44px 40px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 32px var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--wine), var(--gold), var(--wine-lt));
+    }
+
+    /* mockup do produto */
+    .product-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    @media (max-width: 620px) {
+      .product-layout { grid-template-columns: 1fr; }
+      .product-mockup { max-width: 220px; margin: 0 auto; }
+      .product-card { padding: 28px 20px; }
+    }
+    .product-mockup {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      filter: drop-shadow(0 12px 32px rgba(58,15,24,.25));
+    }
+    .product-mockup-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(145deg, var(--wine-dk), var(--wine-lt));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold-lt);
+      text-align: center;
+      padding: 20px;
+      line-height: 1.4;
+    }
+
+    .product-badge {
+      display: inline-block;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      background: rgba(92,26,38,.08);
+      color: var(--wine);
+      border-radius: 6px;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+    .product-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 900;
+      color: var(--wine-dk);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .product-card .tagline {
+      font-size: 15.5px;
+      color: var(--text-mid);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .benefits-title {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold-dk);
+      margin-bottom: 12px;
+    }
+    .benefits-list { list-style: none; margin-bottom: 28px; }
+    .benefits-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 8px 0;
+      font-size: 14.5px;
+      color: var(--text-mid);
+      border-bottom: 1px solid var(--cream-dk);
+    }
+    .benefits-list li:last-child { border-bottom: none; }
+    .check { color: var(--gold); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+    .benefit-outcome {
+      font-size: 12px; color: var(--text-lt);
+      display: block; margin-top: 2px;
+    }
+
+    /* ── COMBO ── */
+    .combo-card {
+      background: linear-gradient(145deg, var(--wine-dk), var(--wine));
+      border-radius: 24px;
+      padding: 48px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 48px rgba(58,15,24,.3);
+    }
+    .combo-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20.5V18H0v5h5v5H0v5h20v-2.5h5V20.5H20zm5 5V18h5v5h-5zM0 5h5v2.5H0V10h5v2.5H0V15h20V0H0v5zm10 7.5V10h5v2.5h-5zm0-5V5h5v2.5h-5z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .combo-best {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--wine-dk);
+      font-size: 11px; font-weight: 800;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: 5px 18px; border-radius: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .combo-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 900;
+      color: var(--cream-lt);
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .combo-card > p {
+      color: rgba(244,235,217,.7);
+      font-size: 16px;
+      max-width: 460px;
+      margin: 0 auto 32px;
+      position: relative;
+    }
+    .combo-mockups {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .combo-mockups img {
+      width: 140px;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,.4));
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .combo-mockups img:first-child { transform: rotate(-5deg) translateX(16px); z-index: 1; }
+    .combo-mockups img:last-child  { transform: rotate(5deg) translateX(-16px); }
+    .combo-mockups .placeholder {
+      width: 130px; height: 173px;
+      background: rgba(255,255,255,.1);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 13px; color: var(--gold-lt);
+      text-align: center; padding: 12px;
+      flex-shrink: 0;
+    }
+    .combo-mockups .placeholder:first-child { transform: rotate(-5deg) translateX(16px); z-index: 1; }
+    .combo-mockups .placeholder:last-child  { transform: rotate(5deg) translateX(-16px); }
+
+    .price-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; margin-bottom: 28px; flex-wrap: wrap;
+      position: relative;
+    }
+    .price-old  { font-size: 17px; color: rgba(244,235,217,.45); text-decoration: line-through; }
+    .price-new  {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 6vw, 52px);
+      font-weight: 900; color: var(--gold-lt);
+    }
+    .price-save {
+      background: rgba(194,148,58,.2);
+      color: var(--gold-lt);
+      border: 1px solid rgba(194,148,58,.3);
+      font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 20px;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-block;
+      padding: 16px 32px; border-radius: 50px;
+      font-size: 16px; font-weight: 700;
+      text-decoration: none; cursor: pointer;
+      border: none; transition: transform .15s, box-shadow .15s;
+      text-align: center; line-height: 1.3;
+    }
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-wine {
+      background: linear-gradient(135deg, var(--wine), var(--wine-lt));
+      color: var(--cream-lt);
+      box-shadow: 0 6px 24px rgba(92,26,38,.35);
+    }
+    .btn-wine:hover { box-shadow: 0 10px 32px rgba(92,26,38,.5); }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-lt));
+      color: var(--wine-dk);
+      box-shadow: 0 6px 24px rgba(194,148,58,.4);
+    }
+    .btn-gold:hover { box-shadow: 0 10px 32px rgba(194,148,58,.55); }
+
+    .btn-outline-cream {
+      background: transparent;
+      color: var(--cream-lt);
+      border: 2px solid rgba(244,235,217,.4);
+    }
+    .btn-outline-cream:hover { background: rgba(244,235,217,.08); }
+
+    .btn-full { display: block; width: 100%; }
+    .btn-sub  { font-size: 12.5px; color: var(--text-lt); display: block; margin-top: 10px; text-align: center; }
+    .btn-sub-light { font-size: 12.5px; color: rgba(244,235,217,.5); display: block; margin-top: 10px; text-align: center; }
+
+    /* ── AUTORA ── */
+    #autora { padding: 80px 0; background: var(--cream); }
+    .author-wrap {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 44px; align-items: start;
+    }
+    @media (max-width: 600px) {
+      .author-wrap { grid-template-columns: 1fr; text-align: center; }
+      .author-photo-wrap { margin: 0 auto; width: fit-content; }
+      .author-stats { justify-content: center; }
+    }
+    .author-photo-wrap {
+      position: relative; width: 180px;
+    }
+    .author-photo {
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      border: 4px solid var(--gold);
+      object-fit: cover;
+      display: block;
+      background: var(--wine);
+    }
+    .author-photo-ring {
+      position: absolute; inset: -6px;
+      border-radius: 50%;
+      border: 1px solid rgba(194,148,58,.3);
+      pointer-events: none;
+    }
+    .author-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 900;
+      color: var(--wine-dk); margin-bottom: 4px;
+    }
+    .author-role { color: var(--gold-dk); font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+    .author-body p { color: var(--text-mid); font-size: 15.5px; margin-bottom: 14px; line-height: 1.7; }
+    .author-stats {
+      display: flex; gap: 24px; margin-top: 24px; flex-wrap: wrap;
+    }
+    .stat .n {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px; font-weight: 900; color: var(--wine);
+    }
+    .stat .l { font-size: 12px; color: var(--text-lt); }
+
+    /* ── DEPOIMENTOS ── */
+    #depoimentos { padding: 80px 0; background: var(--cream-lt); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .testimonial-img {
+      width: 100%; border-radius: 14px;
+      border: 1px solid var(--cream-dk);
+      box-shadow: 0 4px 20px var(--shadow);
+      display: block;
+    }
+
+    /* ── GARANTIA ── */
+    #garantia { padding: 64px 0; background: var(--cream); }
+    .guarantee-box {
+      max-width: 540px; margin: 0 auto;
+      border: 2px solid var(--gold);
+      border-radius: 20px;
+      padding: 40px 36px;
+      text-align: center;
+      background: var(--white);
+      box-shadow: 0 4px 24px var(--shadow);
+    }
+    .guarantee-box .icon { font-size: 48px; display: block; margin-bottom: 16px; }
+    .guarantee-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px; font-weight: 900;
+      color: var(--wine-dk); margin-bottom: 12px;
+    }
+    .guarantee-box p { color: var(--text-mid); font-size: 15px; line-height: 1.7; }
+    .guarantee-box .cta-line { color: var(--wine); font-weight: 700; margin-top: 14px; }
+
+    /* ── PAYMENT ── */
+    .payment-row {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      justify-content: center; margin-top: 20px;
+    }
+    .pay-badge {
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(92,26,38,.06);
+      border: 1px solid rgba(92,26,38,.12);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 13px; color: var(--text-mid);
+    }
+    .pay-badge-light {
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 13px; color: rgba(244,235,217,.65);
+    }
+
+    /* ── FINAL CTA ── */
+    #final-cta {
+      padding: 80px 0;
+      background: linear-gradient(160deg, var(--wine-dk), var(--wine));
+      text-align: center;
+    }
+    #final-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 900; color: var(--cream-lt);
+      margin-bottom: 16px; line-height: 1.2;
+    }
+    #final-cta p { color: rgba(244,235,217,.7); font-size: 17px; max-width: 480px; margin: 0 auto 40px; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 28px 0;
+      background: var(--wine-dk);
+      text-align: center;
+      color: rgba(244,235,217,.45);
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    footer a { color: rgba(244,235,217,.45); text-decoration: none; }
+
+    /* ── SCROLL ANCHORS ── */
+    #produtos, #autora, #depoimentos, #garantia, #final-cta {
+      scroll-margin-top: 16px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .combo-card { padding: 32px 20px; }
+      .guarantee-box { padding: 28px 20px; }
+      .combo-mockups img { width: 110px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <span class="hero-eyebrow">Batalha Espiritual · Karenn Onisanti</span>
+
+    <h1>
+      Sua oração tem poder.<br/>
+      <em>O que falta é estratégia.</em>
+    </h1>
+
+    <p class="sub">
+      Aprenda a interceder com direção e autoridade pelo seu casamento
+      e pelos seus filhos — antes que o inimigo avance mais.
+    </p>
+
+    <a href="#produtos" class="btn btn-gold" style="font-size:17px; padding:18px 40px;">
+      Ver os E-books →
+    </a>
+    <span class="btn-sub-light" style="margin-top:14px;">Acesso imediato · A partir de R$ 37</span>
+
+    <div class="hero-badges">
+      <span class="hero-badge">🛡️ Garantia de 7 dias</span>
+      <span class="hero-badge">📲 Acesso imediato</span>
+      <span class="hero-badge">💳 Pix · Cartão · Boleto</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ DOR ═══════════════════════ -->
+<section id="pain">
+  <div class="container">
+    <div class="section-header">
+      <div class="divider"></div>
+      <h2>Você se identifica com isso?</h2>
+      <p>Se sim, você não está sozinha — e há uma saída.</p>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-item">
+        <span class="icon">⚔️</span>
+        Conflitos no casamento que voltam sempre, por mais que você ore
+      </div>
+      <div class="pain-item">
+        <span class="icon">💔</span>
+        Filhos se afastando da fé e você sem saber como alcançá-los
+      </div>
+      <div class="pain-item">
+        <span class="icon">😔</span>
+        Cansaço de orar sem direção — parece que nada muda
+      </div>
+      <div class="pain-item">
+        <span class="icon">🛡️</span>
+        Sensação de que sua família está vulnerável e você não sabe como protegê-la
+      </div>
+    </div>
+
+    <div class="pain-bridge">
+      <p>
+        O problema não é sua fé.<br/>
+        É que <strong>ninguém te ensinou a usar sua fé como arma.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PRODUTOS ═══════════════════════ -->
+<section id="produtos">
+  <div class="container">
+    <div class="section-header">
+      <div class="divider"></div>
+      <h2>Dois manuais práticos de intercessão combativa</h2>
+      <p>Não são devocionais. São ferramentas de batalha com direção e estratégia.</p>
+    </div>
+
+    <!-- ESPOSA INTERCESSORA -->
+    <div class="product-card">
+      <span class="product-badge">E-book 01</span>
+      <div class="product-layout">
+        <div>
+          <img
+            src="assets/esposa-intercessora.png"
+            alt="E-book Esposa Intercessora"
+            class="product-mockup"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="product-mockup-placeholder" style="display:none;">
+            ESPOSA<br/>INTERCESSORA
+          </div>
+        </div>
+        <div>
+          <h3>Esposa Intercessora</h3>
+          <p class="tagline">
+            O guia prático para interceder com autoridade pelo seu casamento —
+            contra o espírito de divisão, pelo marido e pela aliança que Deus estabeleceu.
+          </p>
+
+          <p class="benefits-title">Você aprenderá a interceder por:</p>
+          <ul class="benefits-list">
+            <li><span class="check">✦</span><span><strong>Restauração da aliança</strong><span class="benefit-outcome">Oração com autoridade sobre o pacto matrimonial</span></span></li>
+            <li><span class="check">✦</span><span><strong>Contra o espírito de divisão</strong><span class="benefit-outcome">Identificar e deter ataques ao lar com precisão</span></span></li>
+            <li><span class="check">✦</span><span><strong>Marido não cristão</strong><span class="benefit-outcome">Intercessão estratégica pela conversão e proteção</span></span></li>
+            <li><span class="check">✦</span><span><strong>Rompimento de maldições geracionais</strong><span class="benefit-outcome">Quebrar o que foi herdado e não pertence ao seu lar</span></span></li>
+            <li><span class="check">✦</span><span><strong>Cura emocional e da comunicação</strong><span class="benefit-outcome">Restaurar entendimento e intimidade no casamento</span></span></li>
+            <li><span class="check">✦</span><span><strong>Proteção contra inveja e adultério</strong><span class="benefit-outcome">Blindar a aliança de influências externas</span></span></li>
+            <li><span class="check">✦</span><span><strong>Futuro profético do casamento</strong><span class="benefit-outcome">Declarar o propósito de Deus para os dois</span></span></li>
+          </ul>
+
+          <a href="https://pay.hotmart.com/P105104040J" target="_blank" rel="noopener" class="btn btn-wine btn-full">
+            Quero o E-book Esposa Intercessora — R$ 37
+          </a>
+          <span class="btn-sub">Acesso imediato após pagamento</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÃE INTERCESSORA -->
+    <div class="product-card">
+      <span class="product-badge">E-book 02</span>
+      <div class="product-layout">
+        <div>
+          <img
+            src="assets/mae-intercessora.png"
+            alt="E-book Mãe Intercessora"
+            class="product-mockup"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="product-mockup-placeholder" style="display:none;">
+            MÃE<br/>INTERCESSORA
+          </div>
+        </div>
+        <div>
+          <h3>Mãe Intercessora</h3>
+          <p class="tagline">
+            O guia prático para cobrir seus filhos com oração poderosa — da identidade
+            espiritual ao destino profético, passando por tudo que ameaça o caminho deles.
+          </p>
+
+          <p class="benefits-title">Você aprenderá a interceder por:</p>
+          <ul class="benefits-list">
+            <li><span class="check">✦</span><span><strong>Identidade espiritual</strong><span class="benefit-outcome">Firmar quem são seus filhos em Cristo antes do mundo dizer</span></span></li>
+            <li><span class="check">✦</span><span><strong>Proteção física, emocional e espiritual</strong><span class="benefit-outcome">Cobertura integral — dentro e fora de casa</span></span></li>
+            <li><span class="check">✦</span><span><strong>Contra más companhias</strong><span class="benefit-outcome">Discernimento sobre as relações que influenciam seus filhos</span></span></li>
+            <li><span class="check">✦</span><span><strong>Vida sentimental</strong><span class="benefit-outcome">Orar com sabedoria pelos relacionamentos afetivos</span></span></li>
+            <li><span class="check">✦</span><span><strong>Conversão, chamado e ministério</strong><span class="benefit-outcome">Interceder pelo destino espiritual com fé e estratégia</span></span></li>
+            <li><span class="check">✦</span><span><strong>Provisão financeira</strong><span class="benefit-outcome">Declarar bênção sobre o futuro material dos filhos</span></span></li>
+            <li><span class="check">✦</span><span><strong>Bênçãos futuras</strong><span class="benefit-outcome">Semear hoje o que seus filhos vão colher amanhã</span></span></li>
+          </ul>
+
+          <a href="https://pay.hotmart.com/P105104062G" target="_blank" rel="noopener" class="btn btn-wine btn-full">
+            Quero o E-book Mãe Intercessora — R$ 37
+          </a>
+          <span class="btn-sub">Acesso imediato após pagamento</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMBO -->
+    <div class="combo-card">
+      <span class="combo-best">✦ Melhor Escolha</span>
+      <h3>Combo Família Blindada</h3>
+      <p>Os dois manuais juntos para cobrir sua família por completo — casamento e filhos protegidos com direção, fé e estratégia.</p>
+
+      <div class="combo-mockups">
+        <img src="assets/esposa-intercessora.png" alt="Esposa Intercessora"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">ESPOSA<br/>INTERCESSORA</div>
+
+        <img src="assets/mae-intercessora.png" alt="Mãe Intercessora"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">MÃE<br/>INTERCESSORA</div>
+      </div>
+
+      <div class="price-row">
+        <span class="price-old">De R$ 74,00</span>
+        <span class="price-new">R$ 46,90</span>
+        <span class="price-save">Economia de R$ 27</span>
+      </div>
+
+      <a href="https://pay.hotmart.com/O105108891T" target="_blank" rel="noopener"
+        class="btn btn-gold" style="font-size:17px; padding:18px 44px;">
+        Quero o Combo Família Blindada →
+      </a>
+      <span class="btn-sub-light">Dois e-books · Acesso imediato · R$ 46,90 no total</span>
+
+      <div class="payment-row" style="margin-top:28px;">
+        <span class="pay-badge-light">💳 Cartão de crédito</span>
+        <span class="pay-badge-light">📱 Pix</span>
+        <span class="pay-badge-light">🏦 Boleto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ AUTORA ═══════════════════════ -->
+<section id="autora">
+  <div class="container">
+    <div class="section-header">
+      <div class="divider"></div>
+      <h2>Quem é Karenn Onisanti</h2>
+    </div>
+    <div class="author-wrap">
+      <div class="author-photo-wrap">
+        <img src="assets/karenn.jpg" alt="Karenn Onisanti" class="author-photo"
+          onerror="this.style.background='var(--wine)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.alt='';" />
+        <div class="author-photo-ring"></div>
+      </div>
+      <div class="author-body">
+        <p class="author-name">Karenn Onisanti</p>
+        <p class="author-role">Pastora · Intercessora · Fundadora da Rede Fortaleza do Reino</p>
+
+        <p>Karenn sabe o que é lutar pelo lar quando tudo parece perdido. Desde 2016 pastoreando ao lado do esposo, ela mergulhou na intercessão não como teoria — mas como necessidade real.</p>
+        <p>Formada ao lado da Pastora Ezenete Rodrigues e do Apóstolo Hudson Medeiros, passou mais de três anos na Estância Paraíso atendendo centenas de pastoras e líderes do Brasil e do mundo.</p>
+        <p>Hoje, como fundadora da Rede Fortaleza do Reino, viaja o Brasil e o mundo capacitando igrejas com estratégias práticas e fundamentos espirituais para enfrentar os desafios do lar e do ministério.</p>
+
+        <div class="author-stats">
+          <div class="stat"><span class="n">+9</span><span class="l">anos pastoreando</span></div>
+          <div class="stat"><span class="n">100s</span><span class="l">líderes capacitadas</span></div>
+          <div class="stat"><span class="n">🌎</span><span class="l">Brasil e mundo</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ DEPOIMENTOS ═══════════════════════ -->
+<section id="depoimentos">
+  <div class="container">
+    <div class="section-header">
+      <div class="divider"></div>
+      <h2>O que estão dizendo</h2>
+      <p>Mulheres que já colocaram em prática a intercessão combativa.</p>
+    </div>
+    <div class="testimonials-grid">
+      <img src="assets/depoimento-1.jpg" alt="Depoimento de leitora" class="testimonial-img" />
+      <img src="assets/depoimento-2.jpg" alt="Depoimento de leitora" class="testimonial-img"
+        onerror="this.style.display='none'" />
+      <img src="assets/depoimento-3.jpg" alt="Depoimento de leitora" class="testimonial-img"
+        onerror="this.style.display='none'" />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ GARANTIA ═══════════════════════ -->
+<section id="garantia">
+  <div class="container">
+    <div class="guarantee-box">
+      <span class="icon">🛡️</span>
+      <h3>Garantia de 7 Dias</h3>
+      <p>Se você adquirir o e-book e sentir que não era o que esperava, entre em contato em até 7 dias e devolvemos seu dinheiro integralmente. Sem burocracia, sem perguntas.</p>
+      <p class="cta-line">Você não tem nada a perder. Sua família tem muito a ganhar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FINAL CTA ═══════════════════════ -->
+<section id="final-cta">
+  <div class="container">
+    <div class="divider"></div>
+    <h2>Sua família não pode esperar.</h2>
+    <p>Cada dia sem direção espiritual é um dia a mais de abertura para o inimigo. Comece a interceder com poder hoje.</p>
+
+    <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+      <a href="https://pay.hotmart.com/O105108891T" target="_blank" rel="noopener"
+        class="btn btn-gold" style="font-size:17px; padding:18px 44px;">
+        Quero o Combo Família Blindada — R$ 46,90 →
+      </a>
+      <a href="#produtos" class="btn btn-outline-cream" style="padding:13px 28px; font-size:15px;">
+        Ver os e-books separados
+      </a>
+    </div>
+
+    <div class="payment-row" style="margin-top:32px;">
+      <span class="pay-badge-light">💳 Cartão (parcelas)</span>
+      <span class="pay-badge-light">📱 Pix</span>
+      <span class="pay-badge-light">🏦 Boleto</span>
+      <span class="pay-badge-light">🔒 Compra segura</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer>
+  <div class="container">
+    <p>© 2025 Karenn Onisanti · Escola do Intercessor</p>
+    <p style="margin-top:6px;"><a href="https://escoladointercessor.com.br">escoladointercessor.com.br</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
