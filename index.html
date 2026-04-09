@@ -454,15 +454,18 @@
       align-items: flex-end;
       margin-bottom: 32px;
       position: relative;
+      background: var(--cream-lt);
+      border-radius: 16px;
+      padding: 8px;
     }
-    .combo-mockups img {
-      width: 140px;
-      filter: drop-shadow(0 8px 20px rgba(0,0,0,.4));
-      border-radius: 8px;
-      flex-shrink: 0;
+    .combo-single-img {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+      margin: 0 auto;
+      mix-blend-mode: multiply;
+      background: var(--cream-lt);
     }
-    .combo-mockups img:first-child { transform: rotate(-5deg) translateX(16px); z-index: 1; }
-    .combo-mockups img:last-child  { transform: rotate(5deg) translateX(-16px); }
     .combo-mockups .placeholder {
       width: 130px; height: 173px;
       background: rgba(255,255,255,.1);
@@ -738,7 +741,7 @@
     @media (max-width: 480px) {
       .combo-card { padding: 32px 20px; }
       .guarantee-box { padding: 28px 20px; }
-      .combo-mockups img { width: 110px; }
+      .combo-img-wrap { width: 110px; }
     }
   </style>
 </head>
@@ -939,15 +942,8 @@
       <p class="combo-description">Os dois manuais juntos para cobrir sua família por completo — casamento e filhos protegidos com direção, fé e estratégia.</p>
 
       <div class="combo-mockups">
-        <img src="assets/esposa-intercessora-capa.jpg" alt="E-book Esposa Intercessora"
-          width="140" height="187" loading="lazy"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-        <div class="placeholder" style="display:none;">ESPOSA<br/>INTERCESSORA</div>
-
-        <img src="assets/mae-intercessora-capa.jpg" alt="E-book Mãe Intercessora"
-          width="140" height="187" loading="lazy"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-        <div class="placeholder" style="display:none;">MÃE<br/>INTERCESSORA</div>
+        <img src="assets/combo-mae-e-esposa.jpg" alt="Combo Esposa & Mãe Intercessora"
+          class="combo-single-img" loading="lazy" />
       </div>
 
       <div class="price-row">
